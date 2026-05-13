@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+:root {
+    /* worst variable naming i've done in a while */
+    --dark-dark: #0A0A0A;
+    --dark: #141414;
+    --dark-light: #1F1F1F;
+
+    --light-dark: #B8B8B8;
+    --light: #CFCFCF;
+    --light-light: #F5F5F5;
+
+    --accent-light: #A37DCA;
+    --accent: #7F49B4;
+    --accent-dark: #522F75;
+}
+
+
+:root {
+    --color-background: var(--dark);
+    --color-background-light: var(--dark-light);
+    --color-background-dark: var(--dark-dark);
+
+    --color-border: var(--accent);
+    --color-border-hover: var(--accent-light);
+
+    --color-heading: var(--light-light);
+    --color-text: var(--light);
+
+    --color-link: var(--accent);
+    --color-link-hover: var(--accent-light);
+
+    --shadow: #000000;
+
+    --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-background: var(--light);
+        --color-background-light: var(--light-light);
+        --color-background-dark: var(--light-light);
+
+        --color-border: var(--accent);
+        --color-border-hover: var(--accent-light);
+
+        --color-heading: var(--dark-light);
+        --color-text: var(--dark);
+
+        --color-link: var(--accent);
+        --color-link-hover: var(--accent-light);
+
+        --shadow: var(--light-dark);
+
+        --section-gap: 160px;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+body {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    transition: color 0.5s,
+    background-color 0.5s,
+    border-radius 0.5s;
+    line-height: 1.6;
+    font-family: Cascadia Code,
+    Source Code Pro,
+    Consolas Inter,
+    monospace;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
