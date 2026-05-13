@@ -2,6 +2,9 @@
 
 Simple SPA template using VueJS. Based on the official Vue3 App Template.
 
+![Image of Template](VueSPA-Template_aboutview.png)
+
+___
 ### Setup
 
 ```sh
