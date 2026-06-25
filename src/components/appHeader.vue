@@ -5,7 +5,7 @@ import NavBar from "@/components/navBar.vue";
 <template>
     <div class="container">
         <h1>
-            <router-link to="/">SPA Template</router-link>
+            <router-link to="/" draggable="false">SPA Template</router-link>
         </h1>
         <navBar/>
     </div>
@@ -19,6 +19,7 @@ import NavBar from "@/components/navBar.vue";
     display: flex;
     gap: 1em;
     flex-direction: row;
+    user-select: none;
 }
 
 .container h1 {

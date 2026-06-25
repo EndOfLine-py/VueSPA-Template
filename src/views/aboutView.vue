@@ -5,7 +5,7 @@
 <template>
     <div class="container">
         <div class="box">
-            <img src="https://avatars.githubusercontent.com/u/54771755" alt="No image for you! :D">
+            <img src="https://avatars.githubusercontent.com/u/54771755" alt="No image for you! :D" draggable="false"/>
             <p>
                 French Comp Sci student using my coding experience to solve micro problems, do things my way or just have fun!
                 <br>
@@ -47,5 +47,6 @@ img {
     width: 120px;
     border-radius: 15px;
     text-align: center;
+    user-select: none;
 }
 </style>

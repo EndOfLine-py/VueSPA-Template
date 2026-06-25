@@ -14,6 +14,7 @@ const navRoutes = router.options.routes.filter(
             v-for="route in navRoutes"
             :key="route.path"
             :to="route.path"
+            draggable="false"
         >
             {{ route.name }}
         </router-link>

@@ -13,48 +13,31 @@
     --accent-light: #A37DCA;
     --accent: #7F49B4;
     --accent-dark: #522F75;
-}
 
 
-:root {
-    --color-background: var(--dark);
-    --color-background-light: var(--dark-light);
-    --color-background-dark: var(--dark-dark);
+    color-scheme: light dark;
+
+    --color-background: light-dark(var(--light), var(--dark));
+    --color-background-light: light-dark(var(--light-light), var(--dark-light));
+    --color-background-dark: light-dark(var(--light-light), var(--dark-dark));
 
     --color-border: var(--accent);
     --color-border-hover: var(--accent-light);
 
-    --color-heading: var(--light-light);
-    --color-text: var(--light);
+    --color-heading: light-dark(var(--dark-light), var(--light-light));
+    --color-text: light-dark(var(--dark), var(--light));
 
     --color-link: var(--accent);
     --color-link-hover: var(--accent-light);
 
-    --shadow: #000000;
+    --shadow: light-dark(var(--light-dark), #000000);
 
     --section-gap: 160px;
 }
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --color-background: var(--light);
-        --color-background-light: var(--light-light);
-        --color-background-dark: var(--light-light);
-
-        --color-border: var(--accent);
-        --color-border-hover: var(--accent-light);
-
-        --color-heading: var(--dark-light);
-        --color-text: var(--dark);
-
-        --color-link: var(--accent);
-        --color-link-hover: var(--accent-light);
-
-        --shadow: var(--light-dark);
-
-        --section-gap: 160px;
-    }
+::selection {
+    background: light-dark(var(--accent-light), var(--accent-dark));
 }
+
 
 *,
 *::before,
